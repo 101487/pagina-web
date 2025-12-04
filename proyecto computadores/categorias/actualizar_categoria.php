@@ -17,7 +17,7 @@ $nombre = $_POST['nombre'];
 
 $sql = "UPDATE categorias SET nombre='$nombre' WHERE id_categoria='$id'";
 
-if ($conexion->query($sql) === TRUE) {
+if ($conexion->query($sql) === true) {
     header("Location: lista_categorias.php");
     exit();
 } else {
