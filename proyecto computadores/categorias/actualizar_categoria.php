@@ -1,5 +1,5 @@
 <?php
-include_once "../db.php";
+include "../db.php";
 session_start();
 
 if (!isset($_SESSION['sesion_activa'])) {
