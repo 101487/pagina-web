@@ -23,4 +23,4 @@ if ($conexion->query($sql) === true) {
 } else {
     echo "Error al actualizar: " . $conexion->error;
 }
-?>
+
