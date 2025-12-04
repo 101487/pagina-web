@@ -15,7 +15,7 @@ if (!isset($_GET['id'])) {
 $id = intval($_GET['id']);
 
 // ------------------------------
-// 1️⃣ Verificar si la categoría tiene productos asociados
+
 // ------------------------------
 $check = $conexion->prepare("SELECT COUNT(*) FROM productos WHERE id_categoria = ?");
 $check->bind_param("i", $id);
@@ -31,7 +31,7 @@ if ($total > 0) {
 }
 
 // ------------------------------
-// 2️⃣ Eliminar la categoría si no tiene productos
+
 // ------------------------------
 $stmt = $conexion->prepare("DELETE FROM categorias WHERE id_categoria = ?");
 $stmt->bind_param("i", $id);
@@ -46,4 +46,4 @@ if ($stmt->execute()) {
 
 $stmt->close();
 $conexion->close();
-?>
+
