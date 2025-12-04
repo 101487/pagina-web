@@ -10,4 +10,4 @@ session_destroy();
 // Redirigir al login
 header("Location: iniciar_sesion.php");
 exit();
-?>
+
